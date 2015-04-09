@@ -1,0 +1,9 @@
+P = [0 0 0;0 0 1;0 1 0;0 1 1;1 0 0;1 0 1]';
+Tc = [1 2 2 1 2 1];
+P2=[0 0 0;0 0 1]';
+T = ind2vec(Tc)
+net = newpnn(P,T);
+Y = sim(net,P)
+Y2=sim(net,P2);
+Yc = vec2ind(Y)
+Yc2=vec2ind(Y2);
